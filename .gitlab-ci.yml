@@ -1,0 +1,22 @@
+image: python:3.7-alpine
+variables:
+  GIT_SSL_NO_VERIFY: "1"
+stages:
+   - deploy
+before_script:
+   - pip install --upgrade setuptools
+   - python -m pip install --upgrade twine
+   - python setup.py sdist
+deploy_staging:
+  stage: deploy
+  script:
+          - python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+  except:
+    - tags
+deploy_production:
+  stage: deploy
+  cache: {}
+  script:
+    - twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+  only:
+    - tags

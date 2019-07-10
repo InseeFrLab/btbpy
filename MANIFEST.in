@@ -1,0 +1,3 @@
+include *.txt
+recursive-include btbpy *.cpp *.pyx
+recursive-include btbpy *.csv
