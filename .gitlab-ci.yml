@@ -1,4 +1,4 @@
-image: python:3.7-alpine
+image: python:3.7-slim
 variables:
   GIT_SSL_NO_VERIFY: "1"
 stages:
