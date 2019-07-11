@@ -31,7 +31,7 @@ else:
 
 setup(
     name="btbpy",
-    version="0.0.4",
+    version="0.0.5",
     author="Julien Jamme, Arlindo Dos Santos, François Sémécurbe",
     maintainer="Julien Jamme",
     maintainer_email="julien.jamme@protonmail.com",
