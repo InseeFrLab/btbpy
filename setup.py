@@ -31,7 +31,7 @@ else:
 
 setup(
     name="btbpy",
-    version="0.0.5",
+    version="0.0.6",
     author="Julien Jamme, Arlindo Dos Santos, François Sémécurbe",
     maintainer="Julien Jamme",
     maintainer_email="julien.jamme@protonmail.com",
@@ -49,7 +49,7 @@ setup(
     packages = find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     license = 'GPL3',
     keywords="smooth greographic kernel smoothing",
-    install_requires = ['numpy'],
+    install_requires = ['numpy','pandas','geopandas'],
     zip_safe=False,
     setup_requires = ['Cython'],
     cmdclass = cmdclass,

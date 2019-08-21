@@ -40,22 +40,41 @@ def smooth_slot(allArgs):
 
 def kernelSmoothing(pdObservations, sEPSG, iCellSize, iBandwidth, pdCentroids = None, iNbCore = 1, verbose = True):
     """
+    Smoothing function with a bisquare kernel - Fonction de lissage à partir d'un noyau bisquare
+    
     Parameters
     ----------
     pdObservations: pandas.DataFrame
-        Geolocated data with (x,y) coordinates and variables to smooth
+        Geolocated data with (x,y) cartesian geographical coordinates and variables to smooth
+        Tableau de données localisées par des coordonnées géographiques cartésiennes (x,y)  et 
+        comportant les variables à lisser
     sEpsg: str
-        Epsg of the projection of geographical data
+        EPSG code of the projection of geographical data. For example, the RGF93 / Lambert 93
+        projection has "2154" epsg code. The WGS 84 projection has the "4356" epsg code.
+        Code EPSG du système de projection géographique des coordonnées. Une projection en Lambert 93 
+        a le code epsg "2154" et le système de projection WGS 84 a le code epsg "4356".
     iCellSize: int
-        Size of grid cells (side's length of squares in the same unit as (x,y) coordinates)
+        Size of grid cells (side's length of squares in the same unit as (x,y) coordinates) - 
+        Taille des carreaux de la grille, exprimée dans l'unité des coordonnées géographiques.
     iBandwidth: int
-        Bandwidth (same unit same unit as (x,y) coordinates)
+        Radius of the Kernel Density Estimator. This bandwitdh acts as a smoothing parameter, controlling the balance between bias and variance.
+        A large bandwidth leads to a very smooth (i.e. high-bias) density distribution. 
+        A small bandwith leads to an unsmooth (i.e. high-variance) density distribution.
+        It must be the same unit as (x,y) coordinates and iCellSize parameter.
+        Rayon de lissage de l'estimation d'intensité par noyau. Cette bande-passante se comporte comme un paramètre de lissage, contrôlant l'équilibre entre biais et variance.
+        Un rayon élevé conduit à une densité très lissée, avec un biais élevé? Un rayon faible génère une densité peu lissée avec une forte variance. 
+        L'unité est identique à celle des coordonnées géographiques et au paramètre iCellSize.
     pdCentroids: pandas.DataFrame, optional
-        Grid with (x,y) coordinates of the centroids to use (Default = None : the centroids are computed by the function)
+        Grid with (x,y) coordinates of the centroids to use (Default = None : the centroids are computed by the function).
+        The projection has to be the same as the pdObservations' projection.
+        DataFrame comportant les coordonnées x et y des centroïdes à utiliser pour le lissage.
+        Le système de projection doit être le même que celui des observations (pdObservations).
     iNbCore: int, optional
-        Number of cores to use (if > 1, the smoothing algorithm is parallelized - default not parallelized : iNbCore = 1)
+        Number of cores to use (if > 1, the smoothing algorithm is parallelized - default not parallelized : iNbCore = 1) - 
+        Nombre de coeurs du processeur utilisés (si >1, l'algorithme de lissage est parallélisé - par défaut iNbCore = 1).
     verbose: boolean, optional
-        print (or not) information about sequences and time during the processing (default to True)
+        print (or not) information about sequences and time during the processing (default to True) - 
+        Affiche (ou non) les informations sur les différentes étapes de calcul et les temps d'exécution (par défaut : True)
     
     Return
     ------
