@@ -40,7 +40,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://gitlab.com/mrteste/btbpy",
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python :: 3',
         'Programming Language :: Cython',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
@@ -55,6 +55,6 @@ setup(
     cmdclass = cmdclass,
     ext_modules = ext_modules,
     package_data={
-        'btbpy': ['data/*.csv']
+        'btbpy': ['data/*.csv', 'data/*.shp', 'data/*.shx', 'data/*.prj', 'data/*.dbf']
     }
 )
