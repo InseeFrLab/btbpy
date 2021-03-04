@@ -71,7 +71,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
           python -m pip install cibuildwheel
-          python -m pip install --upgrade cython
+          pip install --upgrade cython
       - name: Cache pip
         uses: actions/cache@v2
         with:
