@@ -1,0 +1,48 @@
+{% set name = "btbpy" %}
+{% set version = "0.0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+#  sha256: 339175849a62412e6e445be40b1c392ad1194b7c97746492010e7d3e26045814
+
+build:
+  skip: true # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install badlands/ -vv
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - pip
+    - Cython
+    - numpy
+    - pandas
+    - geopandas
+  run:
+    - python
+    - Cython
+    - numpy
+    - pandas
+    - geopandas
+
+test:
+  imports:
+    - btbpy
+
+about:
+  home: "https://github.com/linogaliana/btbpy"
+  license: GPL-3.0+
+  license_family: GPL
+  license_file: LICENSE 
+  summary: "Kernel and density smoothing"
+  doc_url: https://btbpy.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - linogaliana
