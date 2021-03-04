@@ -71,6 +71,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
           python -m pip install cibuildwheel
+          python -m pip install --upgrade cython
       - name: Cache pip
         uses: actions/cache@v2
         with:
@@ -82,7 +83,8 @@ jobs:
             ${{ runner.os }}-pip-
             ${{ runner.os }}-        
       - name: Build wheels
-        run: python -m cibuildwheel --output-dir wheelhouse
+        run: |
+          python -m cibuildwheel --output-dir wheelhouse
         # to supply options, put them in 'env', like:
         # env:
         #   CIBW_SOME_OPTION: value
