@@ -40,7 +40,11 @@ jobs:
         pip install setuptools wheel twine
     - name: Build a binary wheel and a source tarball
       run: |
-        python setup.py sdist bdist_wheel
+        python setup.py sdist bdist_wheel --dist-dir wheelhouse
+    - name: Get wheel as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./wheelhouse/*.whl
 #    - name: Test with pytest
 #      run: pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
 #    - name: Upload pytest test results
