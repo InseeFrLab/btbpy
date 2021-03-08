@@ -103,7 +103,7 @@ jobs:
         env:
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux1
           CIBW_MANYLINUX_I686_IMAGE: manylinux1
-          CIBW_BEFORE_BUILD: pip install --upgrade Cython
+          CIBW_BEFORE_BUILD: pip install -r requirements.txt
           MPL_DISABLE_FH4: "yes"
 
       - uses: actions/upload-artifact@v2
