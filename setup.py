@@ -12,8 +12,6 @@ from distutils.extension import Extension
 from Cython.Build import cythonize
 import numpy as np
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
 
 try:
     from Cython.Distutils import build_ext
