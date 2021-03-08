@@ -1,6 +1,14 @@
 [build-system]
 requires = [
     "setuptools>=42",
-    "wheel"
+    "wheel",
+    "Cython>=0.28.5",
+
+    # use oldest-supported-numpy which provides the oldest numpy version with
+    # wheels on PyPI
+    #
+    # see: https://github.com/scipy/oldest-supported-numpy/blob/master/setup.cfg
+    "oldest-supported-numpy"
+
 ]
 build-backend = "setuptools.build_meta"
