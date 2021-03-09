@@ -23,7 +23,7 @@ jobs:
       - name: Conda build
         run: |
           conda install conda-build
-          conda build recipe
+          conda develop .
 #     - name: Lint
 #       shell: bash -l {0}
 #       run: |
