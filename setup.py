@@ -8,6 +8,8 @@
 
 from setuptools import setup, find_packages
 from distutils.extension import Extension
+import distutils.command.bdist_conda
+
 
 from Cython.Build import cythonize
 import numpy as np
@@ -35,5 +37,6 @@ else:
 
 setup(
     cmdclass = cmdclass,
-    ext_modules = ext_modules
+    ext_modules = ext_modules,
+    distclass=distutils.command.bdist_conda.CondaDistribution
 )

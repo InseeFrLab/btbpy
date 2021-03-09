@@ -5,14 +5,14 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+# source:
+#  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
 #  sha256: 339175849a62412e6e445be40b1c392ad1194b7c97746492010e7d3e26045814
 
 build:
   skip: true # [win]
   number: 0
-  script: {{ PYTHON }} -m pip install badlands/ -vv
+  script: {{ PYTHON }} -m pip install btbpy/ -vv
 
 requirements:
   build:
