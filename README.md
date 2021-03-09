@@ -10,11 +10,11 @@ Developer and maintainer of `btbpy` package :
 
 * Julien Jamme, <julien.jamme@protonmail.com>
 * [Lino Galiana](https://github.com/linogaliana/)
-
+* François Sémécurbe
 
 Authors and Contributors of R `btb` package:
 Arlindo Dos Santos [cre],
-Francois Semecurbe [drt, aut],
+François Sémécurbe [drt, aut],
 Auriane Renaud [ctb],
 Farida Marouchi [ctb]
 Joachim Timoteo [ctb]
