@@ -24,6 +24,7 @@ jobs:
         run: |
           conda install conda-build
           conda develop .
+#          conda build recipe
 #     - name: Lint
 #       shell: bash -l {0}
 #       run: |
