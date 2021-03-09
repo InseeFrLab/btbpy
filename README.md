@@ -1,8 +1,10 @@
-## Beyond the Border (Python version) : Kernel Density Estimation for Urban Geography
+## `btbpy`: Kernel Density Estimation for Urban Geography
 
-### btbpy (Beyond the Border for Python Users)
+![cibuild](https://github.com/InseeFrLab/btbpy/actions/workflows/cibuildwheels.yml/badge.svg)
 
-`btbpy` is a partial transposition of R `btb` package, available on the [CRAN](https://cran.r-project.org/web/packages/btb/index.html).
+btbpy (Beyond the Border for Python Users)
+
+`btbpy` is a partial transposition of R `btb` package, available on the [CRAN](https://cran.r-project.org/web/packages/btb/index.html). `btbpy` stands for *beyond the border for Python users*
 
 ### Contributions
 
