@@ -37,6 +37,6 @@ else:
 
 setup(
     cmdclass = cmdclass,
-    ext_modules = ext_modules,
-    distclass=distutils.command.bdist_conda.CondaDistribution
+    ext_modules = ext_modules#,
+    #distclass=distutils.command.bdist_conda.CondaDistribution
 )
