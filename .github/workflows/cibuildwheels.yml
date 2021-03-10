@@ -1,4 +1,4 @@
-name: Build wheels and archive (Pypy approach)
+name: Build wheels and archive (Pypi approach)
 
 on:
   push:
