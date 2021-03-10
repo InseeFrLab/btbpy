@@ -6,7 +6,7 @@
 `btbpy` is a partial transposition of R `btb` package, available on the [CRAN](https://cran.r-project.org/web/packages/btb/index.html). `btbpy` stands for *beyond the border for Python users*
 
 
-Documentation website: pybtb.readthedocs.io
+Documentation website: https://pybtb.readthedocs.io/en/latest/
 
 
 ### Contributions
