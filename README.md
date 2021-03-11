@@ -2,6 +2,7 @@
 
 [![cibuild](https://github.com/InseeFrLab/btbpy/actions/workflows/cibuildwheels.yml/badge.svg)](https://github.com/InseeFrLab/btbpy/actions)
 [![Documentation Status](https://readthedocs.org/projects/pybtb/badge/?version=latest)](https://pybtb.readthedocs.io/en/latest/?badge=latest)
+[![PyPI version](https://badge.fury.io/py/btbpy.svg)](https://badge.fury.io/py/btbpy)
 
 `btbpy` is a partial transposition of R `btb` package, available on the [CRAN](https://cran.r-project.org/web/packages/btb/index.html). `btbpy` stands for *beyond the border for Python users*
 
